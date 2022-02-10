@@ -16,7 +16,7 @@ class Dictionary:
             self.dictionary.add(str(word.strip()))
             self.numberOfWords += 1
     
-    def isInDictionary(self, word) -> bool:
+    def isInDictionary(self, word: str) -> bool:
         if word in self.dictionary:
             return True
         
