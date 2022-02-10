@@ -21,6 +21,8 @@ class Dealer:
                 # Black case
                 else:
                     out[word[i]] = "black"
+                
+            return out
         
         for i in range(0, len(word)):
             out[word[i]] = "green"
