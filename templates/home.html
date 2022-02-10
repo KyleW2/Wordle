@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wordle</title>
+    </head>
+    <body style="background-color:#424242;">
+        <div style="
+        position: absolute;
+        left: 52%;
+        top: 30%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        ">
+            <table style='font-family:"Verdana"; font-size:200%'>
+                {% for word in wordList %}
+                <tr>
+                    <td style="color:white; background-color:{{ word[0][1] }}">{{ word[0][0] }}</td>
+                    <td style="color:white; background-color:{{ word[1][1] }}">{{ word[1][0] }}</td>
+                    <td style="color:white; background-color:{{ word[2][1] }}">{{ word[2][0] }}</td>
+                    <td style="color:white; background-color:{{ word[3][1] }}">{{ word[3][0] }}</td>
+                    <td style="color:white; background-color:{{ word[4][1] }}">{{ word[4][0] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            <form method="POST">
+                <input name="text">
+                <input type="submit" value="Guess">
+            </form>
+        </div>
+    </body>
+</html>
