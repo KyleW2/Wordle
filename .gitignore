@@ -1,0 +1,10 @@
+# VSCode
+.vscode/
+*.code-workspace
+
+# Maven/Java
+target/
+*.class
+
+# Python
+__pycache__/
