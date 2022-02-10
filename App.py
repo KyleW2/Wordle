@@ -17,13 +17,13 @@ wordList = []
 for i in range(0, MAX_GUESSES):
     temp = []
     for j in range(0, WORD_LENGTH):
-        temp.append((" ", "#424242"))
+        temp.append(("_", "#424242"))
     wordList.append(temp)
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
     global numberOfGuesses
-    
+
     if request.method == 'POST':
         numberOfGuesses += 1
         wordList[numberOfGuesses] = dealer.guessWord(request.form["guess"])
