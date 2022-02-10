@@ -28,10 +28,10 @@ class Dictionary:
         x = random.randint(0, self.numberOfWords)
         c = 0
 
-        for i in self.dictionary:
+        for word in self.dictionary:
             c += 1
             if c == x:
-                return i
+                return word
         
         return None
 
